@@ -2,37 +2,78 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container_app {
+  grid-template-areas:
+    "header header header header header"
+    "main main main main main"
+    "main main main main main"
+    "footer footer footer footer footer";
+  display: grid;
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header_tag {
+  grid-area: header;
+  height: 160px;
+  border-bottom: 2px solid black;
+  background: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Footer_tag {
+  grid-area: footer;
+  border-top: 2px solid black;
+  background: black;
+}
+
+.warp_Calender {
+  grid-area: main;
+}
+
+._calenderStyle {
+  position: relative;
+  height: 300px;
+  width: 900px !important;
+}
+
+.contain_calender {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  padding: 10px;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info_shift {
+  margin: 20px;
 }
+
+.workers_info img {
+  width: 15vw;
+  height: 23vh;
+  border-radius: 50%;
+}
+
+.contain_workers_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid black;
+  background: white;
+}
+
+label {
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: inherit
+}
+
+/* .dayCell{
+  background: green;
+} */

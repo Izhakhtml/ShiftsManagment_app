@@ -18,7 +18,7 @@ const Login = async (req, res) => {
     bcrypt.compare(password, user.password, (err, isMatch) => {
         if (err) return res.status(500).json({ message: "error" });
         if (!isMatch) return res.status(403).json({ message: "one of the details is incorrect" });
-        res.status(200).json({ message: "login successful", success: true })
+        res.status(200).json({ message: "login successful", success: isMatch })
     })
 }
 //! Get

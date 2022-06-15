@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { ShiftContext } from './comtext/ShiftContext';
+import AppRouter from './appRouter/AppRouter';
+import GetTurns from './components/pages/getTurn/GetTurn';
+import { CalenderContext } from './comtext/CalenderContext';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CalenderContext>
+      <GetTurns />
+        <AppRouter />
+      </CalenderContext>
     </div>
   );
 }

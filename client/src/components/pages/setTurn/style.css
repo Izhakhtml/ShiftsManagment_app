@@ -1,0 +1,43 @@
+.calendarModal__content {
+    width: 30vw;
+    color: white;
+}
+
+.set_newTurn {
+    border: 2px solid white;
+    height: 25%;
+    width: 29vw;
+    background: gray;
+}
+.span_tap {
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+}
+
+.button_icon{
+    background: none;
+    border: none;
+    color: green;
+    cursor: pointer;
+}
+h2 {
+    border-bottom: 2px double white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 5px;
+}
+
+.turn_details span {
+    font-size: larger;
+}
+
+.turn_details {
+    border: 10px solid green;
+    background: gray;
+    padding: 30px;
+}

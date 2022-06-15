@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const Shift = mongoose.Schema({
-    selectedDay:{type:Date,require:true},
-    WhatTimeOfDay:{type:Date,require:true},
+    fullName: { type: String, require: true },
+    selectedDay: { type: String, require: true },
+    startHour: { type: String, require: true },
+    endHour: { type: String, require: true },
+    image: { type: String }
 },
-{ timestamps: true })
-module.exports = mongoose.model('Shift',Shift);
+    { timestamps: true })
+module.exports = mongoose.model('Shift', Shift);
