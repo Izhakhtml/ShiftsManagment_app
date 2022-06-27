@@ -5,7 +5,7 @@ import { useEffect, useState, useContext } from 'react'
 import { CalenderProvider } from '../../../comtext/CalenderContext'
 const SendDataTurn = ({ newDataTurn }) => {
     const [newTurn, setNewTurn] = useState({});
-    const { setIsBool } = useContext(CalenderProvider);
+    const { setIsSetTurn } = useContext(CalenderProvider);
     useEffect(() => {
         setNewTurn({
             fullName: "NAME",
@@ -17,7 +17,7 @@ const SendDataTurn = ({ newDataTurn }) => {
     const CreateTurnObject = async () => {
         if (window.confirm(` אתה בטוח שאתה רוצה לקבוע תור בתאריך ${newDataTurn.date} בין השעות ${newDataTurn.startHour} ל ${newDataTurn.endHour}?`)) {
             await Create(newTurn)
-                .then(() => {setIsBool(true)})
+                .then(() => { setIsSetTurn(true) })
                 .catch(err => console.error(err));
         }
     }

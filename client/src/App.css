@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .container_app {
@@ -71,7 +72,7 @@ input {
 label {
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
-  text-align: inherit
+  text-align: inherit;
 }
 
 /* .dayCell{

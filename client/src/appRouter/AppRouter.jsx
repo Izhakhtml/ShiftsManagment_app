@@ -4,6 +4,7 @@ import Profile from "../components/pages/calender/Profile";
 import Footer from "../components/parts/Footer";
 import Header from "../components/parts/Header";
 const AppRouter = () => {
+    
     return (
         <BrowserRouter>
             <div className="container_app">

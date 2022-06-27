@@ -1,3 +1,4 @@
+import Loading from "../loading/loading"
 const BASIC_API = "http://localhost:8080/shift"
 export const Get = async()=>{
     try {
@@ -9,7 +10,6 @@ export const Get = async()=>{
 }
 export const Create = async (turn) => {
     try {
-
         return await fetch(`${BASIC_API}`, {
             method: "POST",
             body: JSON.stringify(turn),
