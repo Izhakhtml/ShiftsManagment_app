@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext, useRef, useCallback } from 'react'
-import { CalenderProvider } from '../../../comtext/CalenderContext'
+import { CalenderProvider } from '../../../context/CalenderContext'
 import PresentDataTurn from '../setTurn/PresentDataTurn'
 import DayCell from './DayCell'
 import { format } from 'date-fns'
@@ -7,7 +7,8 @@ import './style.css'
 const GetTurns = ({ startSelection }) => {
     const { arrayShift, dataObject, setDataObject, isDataArrived } = useContext(CalenderProvider);
     const [currentObj, setCurrentObj] = useState({}); //! this state effect on the cell color green or gray
-
+    // console.log(format(startSelection.startTime._d, "LL"));
+    // console.log(startSelection.startTime.format('dddd HH:ss'));
     useEffect(() => {
         if (arrayShift.length > 0) {
             for (let i = 0; i < arrayShift.length; i++) {
@@ -21,8 +22,8 @@ const GetTurns = ({ startSelection }) => {
     }
     return (
         <>
-            <DayCell ChangeData={ChangeData} currentObj={currentObj}/>
-            {dataObject != {} && dataObject.startTime != undefined? <PresentDataTurn data={{ date: format(dataObject.startTime._d, 'dd/MM/yyyy'), startHour: format(dataObject.startTime._d, 'HH:ss'), endHour: format(dataObject.endTime._d, 'HH:ss') }} /> : ""}
+            <DayCell ChangeData={ChangeData} currentObj={currentObj} />
+            {dataObject != {} && dataObject.startTime != undefined ? <PresentDataTurn data={{ date: format(dataObject.startTime._d, 'dd/MM/yyyy'), startHour: format(dataObject.startTime._d, 'HH:ss'), endHour: format(dataObject.endTime._d, 'HH:ss') }} /> : ""}
         </>
     )
 }

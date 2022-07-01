@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 const DayCell = ({ ChangeData, currentObj }) => {
     return (
         <>
@@ -9,4 +7,4 @@ const DayCell = ({ ChangeData, currentObj }) => {
         </>
     );
 };
-export default memo(DayCell);
+export default DayCell;

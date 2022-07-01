@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import SendDataTurn from './SendDataTurn';
 import DataTurn from './DataTurn';
 import TurnDetails from './TurnDetails';
-import { CalenderProvider } from '../../../comtext/CalenderContext';
+import { CalenderProvider } from '../../../context/CalenderContext';
 import io from 'socket.io-client'
 const Socket = io.connect('http://localhost:8080');
 
