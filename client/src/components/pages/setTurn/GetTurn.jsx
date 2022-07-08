@@ -1,14 +1,12 @@
-import { useEffect, useState, useContext, useRef, useCallback } from 'react'
+import { useEffect, useState, useContext} from 'react'
 import { CalenderProvider } from '../../../context/CalenderContext'
-import PresentDataTurn from '../setTurn/PresentDataTurn'
+import PresentDataTurn from './PresentDataTurn'
 import DayCell from './DayCell'
 import { format } from 'date-fns'
 import './style.css'
 const GetTurns = ({ startSelection }) => {
     const { arrayShift, dataObject, setDataObject, isDataArrived } = useContext(CalenderProvider);
     const [currentObj, setCurrentObj] = useState({}); //! this state effect on the cell color green or gray
-    // console.log(format(startSelection.startTime._d, "LL"));
-    // console.log(startSelection.startTime.format('dddd HH:ss'));
     useEffect(() => {
         if (arrayShift.length > 0) {
             for (let i = 0; i < arrayShift.length; i++) {

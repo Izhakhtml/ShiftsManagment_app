@@ -1,0 +1,59 @@
+.switching_between_compo {
+    width: 10vw;
+    height: 4vw;
+    background: white;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 40px;
+}
+
+.switching_between_compo:hover {
+    background: #E7E9EB;
+    border: 2px solid white;
+}
+.contoin_all {
+    border-bottom: 70px solid #E7E9EB;
+    background: #E7E9EB;
+    position: relative;
+    left: 86%;
+    height: 20%;
+    border-radius: 5px;
+}
+label {
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}
+button {
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    background: white;
+    border: 2px solid white;
+    width: 2;
+    border: 2px solid #E7E9EB;
+
+}
+button:hover {
+    background: rgb(216, 214, 214);
+    background: #E7E9EB;
+
+
+}
+.input_register {
+    height: 5vh;
+}
+.login_countair {
+    background: white;
+    border: 2px solid #E7E9EB;
+
+}
+.register_countair {
+    border: 2px solid #E7E9EB;
+    background: white;
+}
+.input_text {
+    height: 5vh;
+}
+.input_password {
+    height: 5vh;
+}

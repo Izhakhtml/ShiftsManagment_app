@@ -2,14 +2,14 @@ import './style.css'
 import { useEffect, useState, useContext } from "react";
 import SendDataTurn from './SendDataTurn';
 import DataTurn from './DataTurn';
-import TurnDetails from './TurnDetails';
+import TurnWasSet from './TurnWasSet';
 import { CalenderProvider } from '../../../context/CalenderContext';
 import io from 'socket.io-client'
 const Socket = io.connect('http://localhost:8080');
 
 const PresentDataTurn = ({ data }) => {
-            
-    const { isSetTurn, setIsSetTurn, arrayShift, setArrayShift, setDataObject , isDataArrived, setIsDataArrived} = useContext(CalenderProvider);
+
+    const { isSetTurn, setIsSetTurn, arrayShift, setArrayShift, setDataObject, isDataArrived, setIsDataArrived } = useContext(CalenderProvider);
     //! check if there is exist turn in the database
     useEffect(() => {
         if (arrayShift.length > 0) {
@@ -20,10 +20,10 @@ const PresentDataTurn = ({ data }) => {
         }
     }, [])
 
-        Socket.on("insert", (data) => {
-            setIsDataArrived(!isDataArrived)
-            setArrayShift([...arrayShift, data]);
-        });
+    Socket.on("insert", (data) => {
+        setIsDataArrived(!isDataArrived)
+        setArrayShift([...arrayShift, data]);
+    });
     //!
     const ChangeData = () => {
         setDataObject({}) //! this state replace the object to empty in order to that not stay with previous data.
@@ -32,12 +32,12 @@ const PresentDataTurn = ({ data }) => {
     return (
         <div className='contain_all_info' onClick={ChangeData}>
             {
-               isSetTurn !== null ?
-                isSetTurn != true ?
-                    <div className='set_newTurn'>
-                        <DataTurn dataTurn={data} />
-                        <SendDataTurn newDataTurn={data} />
-                    </div> : <TurnDetails details={data} />:"Loading"
+                isSetTurn !== null ?
+                    isSetTurn != true ?
+                        <div className='set_newTurn'>
+                            <DataTurn dataTurn={data} />
+                            <SendDataTurn newDataTurn={data} />
+                        </div> : <TurnWasSet details={data} /> : "Loading"
             }
         </div>
     )

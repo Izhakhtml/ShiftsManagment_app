@@ -1,4 +1,4 @@
-const TurnDetails = ({ details }) => {
+const TurnWasSet = ({ details }) => {
 
     return (
         <div className="turn_details" >
@@ -10,4 +10,4 @@ const TurnDetails = ({ details }) => {
         </div>
     )
 }
-export default TurnDetails;
+export default TurnWasSet;

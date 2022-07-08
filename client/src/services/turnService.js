@@ -1,4 +1,3 @@
-import Loading from "../loading/loading"
 const BASIC_API = "http://localhost:8080/shift"
 export const Get = async()=>{
     try {

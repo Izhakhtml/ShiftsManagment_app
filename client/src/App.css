@@ -42,28 +42,21 @@
   justify-content: space-around;
 }
 
-button {
+.Header_tag button {
   padding: 10px;
   margin: 10px;
+  /* background: gold;
+  font-size: larger; */
 }
-
-.info_shift {
-  margin: 20px;
-}
-
-.workers_info img {
-  width: 15vw;
-  height: 23vh;
-  border-radius: 50%;
-}
-
-.contain_workers_info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-input {
+/* .Header_tag button:hover{
+  padding: 10px;
+  margin: 10px;
+  background: black;
+  font-size: larger;
+  color: gold;
+  border: 2px solid gold;
+} */
+/* input {
   border: none;
   border-bottom: 2px solid black;
   background: white;
@@ -73,8 +66,4 @@ label {
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;
   text-align: inherit;
-}
-
-/* .dayCell{
-  background: green;
 } */
