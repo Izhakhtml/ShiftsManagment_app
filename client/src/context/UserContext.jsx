@@ -2,12 +2,18 @@ import { createContext, useState, useEffect } from "react";
 export const UserProvider = createContext();
 export const UserContext = ({ children }) => {
     const [user, setUser] = useState({});
-    const [isLogin ,setIsLogin] = useState(false);
+    const [isLogin ,setIsLogin] = useState(null);
     useEffect(()=>{
         if (localStorage.getItem('userObject') != undefined && localStorage.getItem('userObject') != {}) {
             setUser(JSON.parse(localStorage.getItem('userObject')))
         }
-        // localStorage.removeItem('userObject');
+        if (localStorage.getItem('isConnected') != undefined) {
+            setIsLogin(localStorage.getItem('isConnected'))
+        }
+        // else{
+        //     console.log("dfsdfsdfsfsfs");
+        // }
+        // localStorage.removeItem('currentMode');
     },[])
     return (
         <UserProvider.Provider value={{ user, setUser ,isLogin ,setIsLogin}}>

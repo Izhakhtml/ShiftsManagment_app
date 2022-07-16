@@ -4,11 +4,12 @@ import { UserProvider } from '../../context/UserContext';
 import { useContext } from 'react';
 import { FiLogOut } from 'react-icons/fi'
 const Header = () => {
-    const { user, setUser,isLogin ,setIsLogin } = useContext(UserProvider)
+    const { user, setUser, isLogin, setIsLogin } = useContext(UserProvider)
     const Logout = () => {
         setUser({})
         setIsLogin(false)
         localStorage.setItem('userObject', {})
+        localStorage.setItem('isConnected', false)
     }
     return (
         <div className='Header_tag'>

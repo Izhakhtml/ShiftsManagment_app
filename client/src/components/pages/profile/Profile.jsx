@@ -1,7 +1,14 @@
+import './profile.css';
+import { useContext } from "react";
+import { UserProvider } from "../../../context/UserContext";
+import UserDetails from "./UserDetails";
+import ExistTurn from './ExistTurns';
 const Profile = () => {
+    const { user } = useContext(UserProvider);
     return (
-        <div>
-            <h1>PROFILE PAGE</h1>
+        <div className="profile">
+            <ExistTurn userData={user} />
+            <UserDetails userData={user} />
         </div>
     )
 }

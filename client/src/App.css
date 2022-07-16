@@ -21,11 +21,11 @@
   background: black;
 }
 
-.Footer_tag {
+/* .Footer_tag {
   grid-area: footer;
   border-top: 2px solid black;
   background: black;
-}
+} */
 
 .warp_Calender {
   grid-area: main;

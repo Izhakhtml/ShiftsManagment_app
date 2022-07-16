@@ -1,0 +1,25 @@
+.profile{
+    padding: 5%;
+    position: relative;
+    left: 85%;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pro_details{
+    margin-top: 5vh;
+    margin-right: 2vw;
+}
+.pro_details h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+.pro_details img{
+    margin: 10px;
+    width: 15vw;
+    border-radius: 20px;
+}
+.exist_turn{
+    margin-top: 5vh;
+}
