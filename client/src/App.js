@@ -2,7 +2,6 @@ import './App.css';
 import AppRouter from './appRouter/AppRouter';
 import { CalenderContext } from './context/CalenderContext';
 import { UserContext } from './context/UserContext'
-import ContainAll from './components/pages/login & register/ContainAll';
 function App() {
   return (
     <div className="App">

@@ -1,7 +1,8 @@
 .profile{
+    margin: 10px;
     padding: 5%;
     position: relative;
-    left: 85%;
+    left: 65%;
     border-radius: 5px;
     border: 2px solid black;
     display: flex;
@@ -21,5 +22,21 @@
     border-radius: 20px;
 }
 .exist_turn{
-    margin-top: 5vh;
+    margin-top: 3px;
+    padding: 5px;
+    border: 2px solid black;
+}
+.exist_turn span{
+    font-weight: bolder;
+}
+.edit_icon{
+  cursor: pointer;
+}
+.delete_icon{
+  cursor: pointer;
+}
+.cut_icon{
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    width: 5vw;
 }

@@ -1,10 +1,11 @@
 import './profile.css';
+import { FaRegEdit } from 'react-icons/fa'
 const UserDetails = ({ userData }) => {
     return (
         <div className='pro_details'>
-            <img src={userData.image} alt="" />
             <h1>{userData.userName}</h1>
-            <button onClick={() => console.log("availableTurns")}>ssss</button>
+            <img src={userData.image} alt="" /><br />
+            <FaRegEdit className='edit_icon'/>
         </div>
     )
 }
