@@ -21,7 +21,7 @@ const GetTurns = ({ startSelection }) => {
     return (
         <>
             <DayCell ChangeData={ChangeData} currentObj={currentObj} />
-            {dataObject != {} && dataObject.startTime != undefined ? <PresentDataTurn data={{ date: format(dataObject.startTime._d, 'dd/MM/yyyy'), startHour: format(dataObject.startTime._d, 'HH:ss'), endHour: format(dataObject.endTime._d, 'HH:ss') }} /> : ""}
+            {dataObject != {} && dataObject.startTime != undefined ? <PresentDataTurn dataObject={dataObject.startTime._d} data={{ date: format(dataObject.startTime._d, 'dd/MM/yyyy'), startHour: format(dataObject.startTime._d, 'HH:ss'), endHour: format(dataObject.endTime._d, 'HH:ss') }} /> : ""}
         </>
     )
 }

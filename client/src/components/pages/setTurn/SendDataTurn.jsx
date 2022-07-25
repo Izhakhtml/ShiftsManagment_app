@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa'
 import { useEffect, useState, useContext } from 'react'
 import { CalenderProvider } from '../../../context/CalenderContext'
 import { UserProvider } from '../../../context/UserContext'
-const SendDataTurn = ({ newDataTurn }) => {
+const SendDataTurn = ({ newDataTurn ,dataObject}) => {
     const [newTurn, setNewTurn] = useState({});
     const { setIsSetTurn, setIsLoading } = useContext(CalenderProvider);
     const { user } = useContext(UserProvider);
@@ -14,12 +14,14 @@ const SendDataTurn = ({ newDataTurn }) => {
             userId: user._id,
             selectedDay: newDataTurn.date,
             startHour: newDataTurn.startHour,
-            endHour: newDataTurn.endHour
+            endHour: newDataTurn.endHour,
+            dataObject: dataObject
         })
     }, [])
+    // console.log(dataObject);
     const CreateTurnObject = async () => {
         if (window.confirm(` אתה בטוח שאתה רוצה לקבוע תור בתאריך ${newDataTurn.date} בין השעות ${newDataTurn.startHour} ל ${newDataTurn.endHour}?`)) {
-            setIsLoading(true)
+            setIsLoading(true);
             await Create(newTurn)
                 .then(() => { setIsSetTurn(true) })
                 .catch(err => console.error(err))

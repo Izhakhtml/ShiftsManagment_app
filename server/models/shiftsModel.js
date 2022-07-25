@@ -5,6 +5,7 @@ const Shift = mongoose.Schema({
     selectedDay: { type: String, require: true },
     startHour: { type: String, require: true },
     endHour: { type: String, require: true },
+    dataObject: { type: Object, require: true },
     image: { type: String }
 },
     { timestamps: true })

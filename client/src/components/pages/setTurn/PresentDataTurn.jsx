@@ -6,9 +6,7 @@ import TurnWasSet from './TurnWasSet';
 import { CalenderProvider } from '../../../context/CalenderContext';
 import io from 'socket.io-client'
 const Socket = io.connect('http://localhost:8080');
-
-const PresentDataTurn = ({ data }) => {
-
+const PresentDataTurn = ({ data , dataObject}) => {
     const { isSetTurn, setIsSetTurn, arrayShift, setArrayShift, setDataObject, isDataArrived, setIsDataArrived } = useContext(CalenderProvider);
     //! check if there is exist turn in the database
     useEffect(() => {
@@ -36,7 +34,7 @@ const PresentDataTurn = ({ data }) => {
                     isSetTurn != true ?
                         <div className='set_newTurn'>
                             <DataTurn dataTurn={data} />
-                            <SendDataTurn newDataTurn={data} />
+                            <SendDataTurn dataObject={dataObject} newDataTurn={data} />
                         </div> : <TurnWasSet details={data} /> : "Loading"
             }
         </div>
