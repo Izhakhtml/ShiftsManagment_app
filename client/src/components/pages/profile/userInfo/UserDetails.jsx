@@ -1,4 +1,4 @@
-import './profile.css';
+import '../profile.css';
 import { FaRegEdit } from 'react-icons/fa'
 const UserDetails = ({ userData }) => {
     return (

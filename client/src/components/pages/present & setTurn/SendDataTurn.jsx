@@ -14,16 +14,14 @@ const SendDataTurn = ({ newDataTurn ,dataObject}) => {
             userId: user._id,
             selectedDay: newDataTurn.date,
             startHour: newDataTurn.startHour,
-            endHour: newDataTurn.endHour,
-            dataObject: dataObject
+            endHour: newDataTurn.endHour
         })
     }, [])
-    // console.log(dataObject);
     const CreateTurnObject = async () => {
         if (window.confirm(` אתה בטוח שאתה רוצה לקבוע תור בתאריך ${newDataTurn.date} בין השעות ${newDataTurn.startHour} ל ${newDataTurn.endHour}?`)) {
             setIsLoading(true);
             await Create(newTurn)
-                .then(() => { setIsSetTurn(true) })
+                .then(() => { setIsSetTurn(null) })
                 .catch(err => console.error(err))
                 .finally(() => setIsLoading(false))
         }

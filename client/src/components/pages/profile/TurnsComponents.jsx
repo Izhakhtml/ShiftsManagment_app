@@ -1,6 +1,6 @@
 import './profile.css';
-import TemplateExistTurn from "./TemplateExistTurn";
-import NotExistTurn from "./NotExistTurn";
+import TemplateExistTurn from "./turnInfo/TemplateExistTurn";
+import NotExistTurn from "./turnInfo/NotExistTurn";
 import Loading from "../../../loading/Loading";
 import { useContext, useEffect, useState } from "react";
 import { CalenderProvider } from "../../../context/CalenderContext";
@@ -28,8 +28,8 @@ const TurnComponents = ({ userData }) => {
         <div className="contain_all_existTurn">
             {
                 availableTurns.length > 0 ?
-                    availableTurns.map((item, i) => bool == true ? <TemplateExistTurn item={item} i={i} /> : <NotExistTurn />)
-                    : <Loading type='spin' color={'black'}/>
+                    availableTurns.map((item, i) => bool == true ? <TemplateExistTurn i={i} data={item} arrayState={availableTurns} setArrayState={setAvailableTurns}/> : <NotExistTurn />)
+                    : <Loading type='spin' color={'black'} />
             }
         </div>
     )

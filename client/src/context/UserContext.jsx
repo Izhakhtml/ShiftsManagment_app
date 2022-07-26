@@ -10,10 +10,6 @@ export const UserContext = ({ children }) => {
         if (localStorage.getItem('isConnected') != undefined) {
             setIsLogin(localStorage.getItem('isConnected'))
         }
-        // else{
-        //     console.log("dfsdfsdfsfsfs");
-        // }
-        // localStorage.removeItem('currentMode');
     },[])
     return (
         <UserProvider.Provider value={{ user, setUser ,isLogin ,setIsLogin}}>
