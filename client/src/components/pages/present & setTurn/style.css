@@ -50,7 +50,7 @@ p {
     color: green;
     cursor: pointer;
 }
-h2 {
+.turn_info h2 {
     border-bottom: 2px double white;
     margin-left: 8vw;
     margin-right: 8vw;

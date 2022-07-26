@@ -25,12 +25,15 @@ const TurnComponents = ({ userData }) => {
         }
     }, [isDataArrived])
     return (
-        <div className="contain_all_existTurn">
+        <div className='exitTurns_component'>
+            <h2>תורות קיימים</h2>
+            <div className='contain_existTurnד'>
             {
                 availableTurns.length > 0 ?
                     availableTurns.map((item, i) => bool == true ? <TemplateExistTurn i={i} data={item} arrayState={availableTurns} setArrayState={setAvailableTurns}/> : <NotExistTurn />)
-                    : <Loading type='spin' color={'black'} />
+                    : <Loading type='balls' color={'black'} />
             }
+            </div>
         </div>
     )
 }

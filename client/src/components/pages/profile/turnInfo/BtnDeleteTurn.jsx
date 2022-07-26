@@ -20,7 +20,11 @@ const BtnDeleteTurn = ({ dataTurn, arrayState, setArrayState }) => {
         }
     }
     return (
-        <RiDeleteBin7Line onClick={DeleteTurn} className='delete_icon' />
+        <>
+            <RiDeleteBin7Line onClick={DeleteTurn} className='delete_icon' />
+            <span className='text_deleteIcon'>מחק תור</span>
+        </>
+
     )
 }
 export default BtnDeleteTurn;

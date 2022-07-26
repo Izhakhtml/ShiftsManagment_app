@@ -7,8 +7,8 @@ const Profile = () => {
     const { user } = useContext(UserProvider);
     return (
         <div className="profile">
-            <TurnComponents userData={user} />
             <UserDetails userData={user} />
+            <TurnComponents userData={user} />
         </div>
     )
 }

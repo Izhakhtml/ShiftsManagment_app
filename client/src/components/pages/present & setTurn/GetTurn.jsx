@@ -1,9 +1,9 @@
+import './style.css'
+import PresentDataTurn from './PresentDataTurn'
 import { useEffect, useState, useContext} from 'react'
 import { CalenderProvider } from '../../../context/CalenderContext'
-import PresentDataTurn from './PresentDataTurn'
 import DayCell from './DayCell'
 import { format } from 'date-fns'
-import './style.css'
 const GetTurns = ({ startSelection }) => {
     const { arrayShift, dataObject, setDataObject, isDataArrived } = useContext(CalenderProvider);
     const [currentObj, setCurrentObj] = useState({}); //! this state effect on the cell color green or gray

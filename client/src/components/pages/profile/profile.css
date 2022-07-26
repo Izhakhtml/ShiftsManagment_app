@@ -1,42 +1,113 @@
-.profile{
-    margin: 10px;
-    padding: 5%;
+.profile {
+    margin: 2px;
+    padding: 2%;
     position: relative;
-    left: 65%;
+    left: 75%;
     border-radius: 5px;
-    border: 2px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    border: 2px solid #000000;
+    width: 30vw;
+    background: gray;
 }
-.pro_details{
-    margin-top: 5vh;
-    margin-right: 2vw;
+
+.pro_details {
+    background: rgb(55, 55, 68);
+    padding: 10px;
+    margin-bottom: 2px;
 }
-.pro_details h1{
+
+.pro_details h1 {
     font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    border-bottom: 2px dotted white;
+    color: white;
+    width: 18vw;
+    margin-left: 20%;
 }
-.pro_details img{
+
+.pro_details img {
     margin: 10px;
     width: 15vw;
     border-radius: 20px;
 }
-.exist_turn{
-    margin-top: 3px;
-    padding: 5px;
-    border: 2px solid black;
-}
-.exist_turn span{
+
+.turnInfo span {
     font-weight: bolder;
+    color: white;
 }
-.edit_icon{
-  cursor: pointer;
+
+.turnInfo h3 {
+    color: white;
 }
-.delete_icon{
-  cursor: pointer;
+
+.edit_icon {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 50px;
+    color: white;
+    position: relative;
 }
-.cut_icon{
+
+.delete_icon {
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    margin: 2px;
+    font-size: 30px;
+}
+.cut_icon {
     padding-bottom: 10px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     width: 5vw;
+    color: white;
+    font-size: 30px;
+}
+
+.contain_existTurnד {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.exist_turn {
+    padding: 4px;
+    border: 2px solid white;
+    width: 9vw;
+}
+
+.text_editIcon {
+    color: transparent;
+    position: absolute;
+}
+
+.edit_icon:hover+.text_editIcon {
+    background: rgb(209, 206, 206);
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.text_deleteIcon {
+    color: transparent;
+    position: absolute;
+    top: 89%;
+}
+
+.delete_icon:hover+.text_deleteIcon {
+    background: rgb(209, 206, 206);
+    color: black;
+    padding: 3px;
+    border: 1px solid black;
+}
+.exitTurns_component{
+    background: rgb(55, 55, 68);
+    
+}
+.exitTurns_component h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    border-bottom: 2px dotted white;
+    color: white;
+    width: 18vw;
+    margin-left: 20%;
 }

@@ -1,4 +1,5 @@
 .loading{
     position: absolute;
     z-index: 100;
+    margin-left:10%;
 }
