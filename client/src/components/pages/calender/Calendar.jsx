@@ -11,7 +11,7 @@ const CalendarApp = () => { //! component
         <div className='warp_Calender'>
             <h1>קביעת תור</h1>
             <div className='contain_calender'>
-                { isLoading ? <Loading type={'spin'} color='black' /> : ""}
+                { isLoading ? <Loading type='spin' color='black' /> : ""}
                 <WeekCalendar
                     startTime={{ h: 8, m: 0 }}
                     endTime={{ h: 20, m: 15 }}
