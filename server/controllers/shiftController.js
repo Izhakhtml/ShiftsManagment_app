@@ -5,7 +5,7 @@ let Get = async (req, res) => {
         .then((data) => {
             res.send(data);
         })
-        .catch((err) => res.status(404).send({ massage: error }));
+        .catch((error) => res.status(404).send({ massage: error }));
 };
 
 //GET:ID
@@ -14,7 +14,7 @@ let GetById = async (req, res) => {
         .then((data) => {
             res.send(data);
         })
-        .catch((err) => res.status(404).send({ massage: error }));
+        .catch((error) => res.status(404).send({ massage: error }));
 };
 //POST
 let Add = async (req, res) => {
@@ -22,7 +22,7 @@ let Add = async (req, res) => {
         .then((data) => {
             res.send(data);
         })
-        .catch((err) => res.status(404).send({ massage: error }));
+        .catch((error) => res.status(404).send({ massage: error }));
 };
 
 //PUT
@@ -31,7 +31,7 @@ let Update = async (req, res) => {
         .then((data) => {
             res.send(data);
         })
-        .catch((err) => res.status(404).send({ massage: error }));
+        .catch((error) => res.status(404).send({ massage: error }));
 };
 
 //DELETE
@@ -39,7 +39,7 @@ let Delete = async (req, res) => {
     await Shift.findByIdAndRemove({ _id: req.params.id }).then((data) => {
         res.send(data);
     })
-        .catch((err) => res.status(404).send({ massage: error }));
+        .catch((error) => res.status(404).send({ massage: error }));
 };
 module.exports = {
     Get,

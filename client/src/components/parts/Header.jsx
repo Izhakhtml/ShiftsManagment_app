@@ -8,8 +8,9 @@ const Header = () => {
     const Logout = () => {
         setUser({})
         setIsLogin(false)
-        localStorage.setItem('userObject', {})
-        localStorage.setItem('isConnected', false)
+        window.localStorage.removeItem('image');
+        localStorage.setItem('userObject', {});
+        localStorage.setItem('isConnected', false);
     }
     return (
         <div className='Header_tag'>

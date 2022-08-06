@@ -27,3 +27,17 @@ export const LOGIN = async (login) => {
         return error
     }
 }
+export const EDIT = async (id, editUser) => {
+    try {
+        return await fetch(`${BASIC_API}/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(editUser),
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+    } catch (error) {
+        return error
+    }
+}

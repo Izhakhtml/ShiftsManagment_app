@@ -13,6 +13,7 @@
     background: rgb(55, 55, 68);
     padding: 10px;
     margin-bottom: 2px;
+    border: 2px solid black;
 }
 
 .pro_details h1 {
@@ -54,6 +55,7 @@
     margin: 2px;
     font-size: 30px;
 }
+
 .cut_icon {
     padding-bottom: 10px;
     border-bottom: 2px solid white;
@@ -62,29 +64,32 @@
     font-size: 30px;
 }
 
-.contain_existTurnד {
-    padding: 10px;
+.contain_Turns {
+    /* padding: 5px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .exist_turn {
+    margin: 3px;
     padding: 4px;
     border: 2px solid white;
-    width: 9vw;
+    width: 13vw;
 }
 
 .text_editIcon {
     color: transparent;
     position: absolute;
+    /* top: 48%;
+    left: 56.5%; */
 }
 
 .edit_icon:hover+.text_editIcon {
     background: rgb(209, 206, 206);
+    border: 1px solid black;
     color: black;
     padding: 5px;
-    border: 1px solid black;
 }
 
 .text_deleteIcon {
@@ -99,15 +104,63 @@
     padding: 3px;
     border: 1px solid black;
 }
-.exitTurns_component{
+
+.exitTurns_component {
     background: rgb(55, 55, 68);
-    
+    border: 2px solid black;
 }
-.exitTurns_component h2{
+
+.exitTurns_component h2 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
     border-bottom: 2px dotted white;
     color: white;
     width: 18vw;
     margin-left: 20%;
+}
+
+.edit_userProfile {
+    border: 2px solid black;
+    width: 30vw;
+    height: 60vh;
+    position: absolute;
+    right: 2.3%;
+    top: 12%;
+    background: rgb(95, 95, 114);
+    border-radius: 20px;
+}
+
+.edit_userProfile input {
+    height: 50px;
+    width: 20vw;
+    border-radius: 10px;
+}
+
+.edit_userProfile label {
+    color: white;
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.edit_userProfile button {
+    padding: 10px;
+    margin: 15px;
+    font-size: x-large;
+
+}
+
+.edit_userProfile h2 {
+    position: absolute;
+    left: 91%;
+    top: -4%;
+    background: white;
+    width: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.notExistTurn{
+    position: relative;
+    left: 18%;
+    color: white;
+    font-size: 20px;
 }

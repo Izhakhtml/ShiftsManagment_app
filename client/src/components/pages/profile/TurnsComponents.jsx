@@ -14,25 +14,34 @@ const TurnComponents = ({ userData }) => {
         if (arrayShift.length > 0) {
             arrayShift.map(item => {
                 if (new Date() <= new Date(`${item.selectedDay.substr(item.selectedDay.indexOf('/') + 4)}/${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}/${item.selectedDay.substr(0, item.selectedDay.indexOf('/'))}`) || format(new Date(), 'dd/MM/yyyy') == item.selectedDay) {
+                   
                     if (item.userId == userData._id) {
+                        console.log("in");
                         availableTurns[counter] = item;
                         setBool(true);
                         setAvailableTurns([...availableTurns]);
                         counter++;
+                    } else {
+                        console.log("out");
+                        setAvailableTurns(["not exist"])
                     }
                 }
             });
         }
     }, [isDataArrived])
+    useEffect(()=>{
+        availableTurns[0]=="not exist"?
+        setBool(false):<></>
+    },[availableTurns])
     return (
         <div className='exitTurns_component'>
-            <h2>תורות קיימים</h2>
-            <div className='contain_existTurnד'>
-            {
-                availableTurns.length > 0 ?
-                    availableTurns.map((item, i) => bool == true ? <TemplateExistTurn i={i} data={item} arrayState={availableTurns} setArrayState={setAvailableTurns}/> : <NotExistTurn />)
-                    : <Loading type='balls' color={'black'} />
-            }
+            <h2>תורות </h2>
+            <div className='contain_Turns'>
+                {
+                    availableTurns.length > 0 ?
+                        availableTurns.map((item, i) => bool == true ? <TemplateExistTurn i={i} data={item} arrayState={availableTurns} setArrayState={setAvailableTurns} /> : <NotExistTurn />)
+                        : <Loading type='balls' color={'black'} />
+                }
             </div>
         </div>
     )

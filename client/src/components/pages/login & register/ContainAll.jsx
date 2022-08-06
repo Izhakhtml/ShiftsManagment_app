@@ -1,8 +1,8 @@
+import '../../../App.css'
+import './style.css'
 import Register from './Register'
 import Login from './Login'
 import { useState } from 'react'
-import './style.css'
-import '../../../App.css'
 const ContainAll = () => {
     const [bool, setBool] = useState(false)
     const ChangeToRegister = () => { setBool(true) }

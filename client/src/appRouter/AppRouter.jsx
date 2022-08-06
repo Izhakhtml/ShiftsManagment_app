@@ -6,14 +6,15 @@ import Profile from "../components/pages/profile/Profile";
 import Footer from "../components/parts/Footer";
 import Header from "../components/parts/Header";
 import ContainAll from "../components/pages/login & register/ContainAll";
-import ProtectedRoute from "./ProtectedRoute";
+import Register from "../components/pages/login & register/Register";
+import Login from "../components/pages/login & register/Login";
+// import ProtectedRoute from "./ProtectedRoute";
 const AppRouter = () => {
     const { user } = useContext(UserProvider);
     return (
         <BrowserRouter>
-        {/* {console.log(isLogin)} */}
+
             <div className="container_app">
-                {/* {console.log(window.location.href)} */}
                 <Header />
                 <Routes>
                     {
@@ -21,7 +22,10 @@ const AppRouter = () => {
                             <>
                                 <Route path="/" element={ <Profile />}></Route>
                                 <Route path="/settingShift" element={<CalendarApp />}></Route>
-                            </> : <Route path="/" element={<ContainAll />}></Route>
+                            </> : 
+                            <>
+                                <Route path="/" element={<ContainAll />}></Route>
+                            </>
                     }
                     {/* <Route path="/" element={<ClientRoutes />}></Route>
                     <Route path="/settingShift" element={<ClientRoutes />}></Route>

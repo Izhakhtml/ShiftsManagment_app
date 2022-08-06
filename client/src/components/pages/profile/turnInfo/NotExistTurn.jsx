@@ -1,7 +1,8 @@
+import '../profile.css';
 const NotExistTurn = () => {
     return (
-        <div>
-            <h3>לא קיים תור במערכת </h3>
+        <div className='notExistTurn'>
+            <h3>!לא קיים תור במערכת </h3>
         </div>
     )
 }
