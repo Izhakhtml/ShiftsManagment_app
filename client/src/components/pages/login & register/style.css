@@ -11,6 +11,7 @@
     background: #E7E9EB;
     border: 2px solid white;
 }
+
 .contoin_all {
     border-bottom: 70px solid #E7E9EB;
     background: #E7E9EB;
@@ -19,10 +20,12 @@
     height: 20%;
     border-radius: 5px;
 }
+
 label {
     font-size: larger;
     font-family: 'Courier New', Courier, monospace;
 }
+
 button {
     margin: 5px;
     padding: 5px;
@@ -33,27 +36,106 @@ button {
     border: 2px solid #E7E9EB;
 
 }
+
 button:hover {
     background: rgb(216, 214, 214);
     background: #E7E9EB;
-
-
 }
+
 .input_register {
     height: 5vh;
 }
-.login_countair {
+
+.login_countainer {
     background: white;
     border: 2px solid #E7E9EB;
 
 }
-.register_countair {
+
+.register_countainer {
     border: 2px solid #E7E9EB;
     background: white;
 }
+
 .input_text {
     height: 5vh;
 }
+
 .input_password {
     height: 5vh;
+}
+
+/*//!  fullName */
+
+.fullName_icon {
+    position: relative;
+    left: 2px;
+    margin: 2px;
+}
+
+.fullName_remark_text {
+    color: transparent;
+    font-size: smaller;
+    position: absolute;
+}
+
+.fullName_icon:hover+.fullName_remark_text {
+    background: #E7E9EB;
+    ;
+    width: 10vw;
+    height: 8vh;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    padding:2px
+}
+
+/* //! password */
+.password_icon {
+    position: relative;
+    left: 2px;
+    margin: 2px;
+}
+
+.password_remark_text {
+    color: transparent;
+    font-size: smaller;
+    position: absolute;
+}
+
+.password_icon:hover+.password_remark_text {
+    background: #E7E9EB;
+    ;
+    width: 10vw;
+    height: 8vh;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    padding:2px
+}
+
+/* //! phoneNumber */
+.phoneNumber_icon {
+    position: relative;
+    left: 2px;
+    margin: 2px;
+}
+
+.phoneNumber_remark_text {
+    color: transparent;
+    font-size: smaller;
+    position: absolute;
+}
+
+.phoneNumber_icon:hover+.phoneNumber_remark_text {
+    background: #E7E9EB;
+    width: 10vw;
+    height: 9vh;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    padding:2px
 }

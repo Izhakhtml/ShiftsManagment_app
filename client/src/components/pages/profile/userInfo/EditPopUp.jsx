@@ -2,12 +2,13 @@ import { useContext, useState } from "react";
 import { EDIT } from "../../../../services/userService";
 import { UserProvider } from '../../../../context/UserContext'
 import { CalenderProvider } from "../../../../context/CalenderContext";
+import axios from 'axios'
 import Loading from '../../../../loading/Loading'
 const EditPopUp = ({ ClosePopUp, userData }) => {
     const editProfile = {};
     const { user, setUser } = useContext(UserProvider);
     const { isLoading, setIsLoading } = useContext(CalenderProvider);
-
+console.log(user);
     const InputValue = (e) => {
         const { name, value } = e.target;
         editProfile[name] = value;

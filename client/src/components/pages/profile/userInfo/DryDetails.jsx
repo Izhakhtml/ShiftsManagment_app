@@ -5,11 +5,9 @@ const DryDetails = ({ userData }) => {
     const [image, setImage] = useState("");
     useEffect(() => {
         if (window.localStorage.getItem('image')) {
-            // console.log("in");
             setImage(window.localStorage.getItem('image'));
         } else {
-            // console.log("out");
-            fetch(`http://localhost:8080/${userData.image}`)
+           fetch(`http://localhost:8080/${userData.image}`)
                 .then((data) => {
                     window.localStorage.setItem('image', data.url);
                     setImage(data.url);

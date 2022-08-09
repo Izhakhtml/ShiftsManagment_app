@@ -1,7 +1,7 @@
 import './style.css'
 const LoginTemplate = ({InputValue , UserLogin }) => { 
 return (
-    <div className='login_countair'>
+    <div className='login_countainer'>
         <label htmlFor="" >USER NAME</label><br />
         <input className='input_text' onChange={InputValue} type="text" name="userName" placeholder='user name..'/><br />
         <label htmlFor="">PASSWORD</label><br />

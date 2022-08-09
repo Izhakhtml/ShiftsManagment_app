@@ -1,16 +1,17 @@
-import { useContext, useState } from 'react'
-import { UserProvider } from '../../../context/UserContext';
-import { REGISTER } from '../../../services/userService'
+import { useState } from 'react'
+import { registerValidation4 } from '../../../validation/registerInputs'
 import RegisterTemplate from './RegisterTemplate'
+import ContainAll from './ContainAll'
 import axios from 'axios'
+const StyleInput = {
+    border: "border:2px solid black"
+}
 const Register = () => {
-    const [newUser, setNewUser] = useState({});
-    const [image, setImage] = useState({});
     const [name, setName] = useState('');
     const [pass, setPass] = useState('');
     const [pho, setPho] = useState('');
     const [img, setImg] = useState('');
-    const { user, setUser } = useContext(UserProvider)
+    const [bool, setBool] = useState(null);
     const InputValue = (e) => {
         switch (e.target.name) {
             case 'userName':
@@ -22,46 +23,39 @@ const Register = () => {
             case 'image':
                 return setImg(e.target.files[0])
             default:
-                return console.log("ijmi");
+                return console.log("error register");
         }
-    }
-    const InputFocus = (e) => {
-        // data.append(e.target.name)
     }
     const CreateNewUser = async (e) => {
         e.preventDefault()
-        const data = new FormData();
-        data.append("userName", name);
-        data.append("password", pass);
-        data.append("phoneNumber", pho);
-        data.append("image", img);
-
-        // axios.post('https://httpbin.org/anything', data)
-           await axios.post('http://localhost:8080/user/register', data)
-            // REGISTER(data)
-            .then(dd => console.log(dd))
-            .catch(re => console.log(re))
-        // fetch('https://httpbin.org/anything', {
-        //     method: 'POST',
-        //     body: JSON.stringify(data),
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     }
-        // })
-        //     .then(dd => console.log(dd))
-        //     .catch(re => console.log(re))
-        // fetch('https://httpbin.org/anything', data, {
-        //     method: 'POST',
-        // })
-        //     .then(dd => console.log(dd))
-        //     .catch(re => console.log(re))
-        // REGISTER(newUser,data )
-        // .then(data => console.log(data))
-        // .catch(reject => console.log(reject))
+        let nameBool = false;
+        let passBool = false;
+        let numBool = false;
+        if (registerValidation4(e.target.form[0], 3)) nameBool = true;
+        if (registerValidation4(e.target.form[1], 3)) passBool = true;
+        if (registerValidation4(e.target.form[2], 9)) numBool = true;
+        if (nameBool && passBool && numBool) {
+            const data = new FormData();
+            data.append("userName", name);
+            data.append("password", pass);
+            data.append("phoneNumber", pho);
+            data.append("image", img);
+            await axios.post('http://localhost:8080/user/register', data)
+                .then(data => {
+                    if (data) {
+                        alert(`הנתונים שלך נשמרו במערכת בהצלחה!\n אתה רשאי להתחבר!`)
+                        setBool(false)
+                    }
+                })
+                .catch(rej => alert(rej.response.data.message))
+        } else {
+            console.log("out");
+        }
     }
+
     return (
         <>
-            <RegisterTemplate InputValue={InputValue} CreateNewUser={CreateNewUser} InputFocus={InputFocus} />
+            <RegisterTemplate InputValue={InputValue} CreateNewUser={CreateNewUser}  />
         </>
     )
 }

@@ -48,13 +48,6 @@
     position: relative;
 }
 
-.delete_icon {
-    cursor: pointer;
-    color: white;
-    font-size: larger;
-    margin: 2px;
-    font-size: 30px;
-}
 
 .cut_icon {
     padding-bottom: 10px;
@@ -92,6 +85,13 @@
     padding: 5px;
 }
 
+.delete_icon {
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    margin: 2px;
+    font-size: 30px;
+}
 .text_deleteIcon {
     color: transparent;
     position: absolute;

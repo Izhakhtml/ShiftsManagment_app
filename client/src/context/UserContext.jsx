@@ -2,8 +2,9 @@ import { createContext, useState, useEffect } from "react";
 export const UserProvider = createContext();
 export const UserContext = ({ children }) => {
     const [user, setUser] = useState({});
-    const [isLogin ,setIsLogin] = useState(null);
-    useEffect(()=>{
+    const [isLogin, setIsLogin] = useState(null);
+    const [isDisappear, setIsDisappear] = useState(null)
+    useEffect(() => {
         if (localStorage.getItem('userObject') != undefined && localStorage.getItem('userObject') != {}) {
             setUser(JSON.parse(localStorage.getItem('userObject')))
         }
@@ -11,9 +12,9 @@ export const UserContext = ({ children }) => {
             setIsLogin(localStorage.getItem('isConnected'))
         }
         // localStorage.removeItem('userObject')
-    },[])
+    }, [])
     return (
-        <UserProvider.Provider value={{ user, setUser ,isLogin ,setIsLogin}}>
+        <UserProvider.Provider value={{ user, setUser, isLogin, setIsLogin, isDisappear, setIsDisappear }}>
             {children}
         </UserProvider.Provider>
     )

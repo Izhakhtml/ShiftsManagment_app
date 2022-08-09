@@ -1,5 +1,4 @@
-import '../profile.css';
-import { FaRegEdit } from 'react-icons/fa'
+ import { FaRegEdit } from 'react-icons/fa'
 import { useState } from 'react';
 import EditPopUp from './EditPopUp';
 const BtnEditProfile = ({ userData }) => {
