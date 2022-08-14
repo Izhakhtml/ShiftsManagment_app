@@ -3,12 +3,13 @@ const bcrypt = require('bcryptjs');
 //! Register
 const Register = async (req, res) => {
     const { path } = req.file;
+
     console.log(req.body, req.file);
     if (await User.exists({ userName: req.body.userName })) return res.status(400).send({ message: "userName already exists" })
     bcrypt.hash(req.body.password, 10, async (err, hash) => {
         if (err) return res.status(500).send({ message: "hash error" });
         req.body.password = hash;
-        req.body.image = path.replace('\\','/');
+        req.body.image = path.replace('\\', '/');
         await User.create(req.body)
             .then(result => res.status(200).send({ message: 'success', data: result }))
             .catch(err => res.status(500).send({ message: err.message }))
@@ -34,11 +35,33 @@ const Get = async (req, res) => {
         .then((data) => res.send(data))
         .catch((err) => res.status(404).send({ message: err.message }))
 }
+const GetById = async (req, res) => {
+    await User.findById({ _id: req.params.id })
+        .then((data) => {
+            res.send(data)
+        })
+        .catch((err) => res.status(404).send({ message: err.message }))
+}
 //! Update
 const Update = async (req, res) => {
+    // if (req.file || req.body) {
+    //     console.log(req.body);
+    // const { path } = req.file;
+    // console.log(path);
+    if (req.file) {
+        req.body.image = req.file.path.replace('\\', '/') 
+    } else {
+        req.body.image = req.body.image;
+    }
+    // req.body.image = req.file.path.replace('\\', '/') || req.body.image;
     return await User.findByIdAndUpdate({ _id: req.params.id }, req.body)
         .then(data => res.send(data))
         .catch((err) => res.status(404).send({ message: err.message }))
+    // } else {
+    //     res.status(404).send({ message: "err.message" })
+    //     console.log("out");
+    // }
+
 }
 //! Delete
 const Delete = async (req, res) => {
@@ -46,4 +69,4 @@ const Delete = async (req, res) => {
         .then((data) => { res.send("object is delete") })
         .catch((err) => res.status(404).send({ message: err.message }))
 }
-module.exports = { Register, Login, Get, Update, Delete }
+module.exports = { Register, Login, Get, GetById, Update, Delete }

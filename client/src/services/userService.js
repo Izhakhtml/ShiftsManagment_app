@@ -41,3 +41,12 @@ export const EDIT = async (id, editUser) => {
         return error
     }
 }
+export const GetById = async (id) => {
+    try {
+        return await fetch(`${BASIC_API}/${id}`)
+            .then(response => response.json())
+            .catch(error => console.log(error))
+    } catch (error) {
+        return error
+    }
+}

@@ -2,6 +2,7 @@ import '../../../App.css'
 import './style.css'
 import Register from './Register'
 import Login from './Login'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 const ContainAll = () => {
     const [bool, setBool] = useState(false)

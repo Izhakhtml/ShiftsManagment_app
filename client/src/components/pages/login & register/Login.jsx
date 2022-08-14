@@ -21,6 +21,7 @@ const Login = () => {
                     setUser(data.data)
                     localStorage.setItem('isConnected', true)
                     localStorage.setItem('userObject', JSON.stringify(data.data))
+
                 } else {
                     alert(data.message)
                 }

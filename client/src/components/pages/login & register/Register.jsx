@@ -1,17 +1,12 @@
 import { useState } from 'react'
 import { registerValidation4 } from '../../../validation/registerInputs'
 import RegisterTemplate from './RegisterTemplate'
-import ContainAll from './ContainAll'
 import axios from 'axios'
-const StyleInput = {
-    border: "border:2px solid black"
-}
 const Register = () => {
     const [name, setName] = useState('');
     const [pass, setPass] = useState('');
     const [pho, setPho] = useState('');
     const [img, setImg] = useState('');
-    const [bool, setBool] = useState(null);
     const InputValue = (e) => {
         switch (e.target.name) {
             case 'userName':
@@ -44,7 +39,6 @@ const Register = () => {
                 .then(data => {
                     if (data) {
                         alert(`הנתונים שלך נשמרו במערכת בהצלחה!\n אתה רשאי להתחבר!`)
-                        setBool(false)
                     }
                 })
                 .catch(rej => alert(rej.response.data.message))

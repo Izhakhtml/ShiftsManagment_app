@@ -8,7 +8,6 @@ import Header from "../components/parts/Header";
 import ContainAll from "../components/pages/login & register/ContainAll";
 import Register from "../components/pages/login & register/Register";
 import Login from "../components/pages/login & register/Login";
-// import ProtectedRoute from "./ProtectedRoute";
 const AppRouter = () => {
     const { user } = useContext(UserProvider);
     return (
@@ -18,18 +17,16 @@ const AppRouter = () => {
                 <Header />
                 <Routes>
                     {
+                        
                         user.userName != undefined ?
                             <>
-                                <Route path="/" element={ <Profile />}></Route>
+                                <Route path="/" element={<Profile />}></Route>
                                 <Route path="/settingShift" element={<CalendarApp />}></Route>
-                            </> : 
+                            </> :
                             <>
                                 <Route path="/" element={<ContainAll />}></Route>
                             </>
                     }
-                    {/* <Route path="/" element={<ClientRoutes />}></Route>
-                    <Route path="/settingShift" element={<ClientRoutes />}></Route>
-                    <Route path="/" element={<ProtectedRoute><ClientRoutes /></ProtectedRoute> }></Route> */}
                 </Routes>
                 <Footer />
             </div>

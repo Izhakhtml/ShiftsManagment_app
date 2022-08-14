@@ -1,11 +1,11 @@
 import TurnDetails from './TurnDetails'
 import BtnDeleteTurn from './BtnDeleteTurn'
-const TemplateExistTurn = ({ i, data, arrayState, setArrayState }) => {
+const ExitTurn = ({ data, arrayState, setArrayState }) => {
     return (
-        <div className="exist_turn" key={i} >
+        <div className="exist_turn"  >
             <TurnDetails dataTurn={data} />
             <BtnDeleteTurn dataTurn={data} arrayState={arrayState} setArrayState={setArrayState} />
         </div>
     )
 }
-export default TemplateExistTurn;
+export default ExitTurn;
