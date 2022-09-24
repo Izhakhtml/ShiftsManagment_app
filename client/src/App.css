@@ -3,7 +3,7 @@
 
 }
 
-.container_app {
+/* .container_app {
   grid-template-areas:
     "header header header header header"
     "main main main main main"
@@ -12,20 +12,24 @@
   display: grid;
   width: 100vw;
   height: 100vh;
+} */
+h1{
+  font-family: 'Courier New', Courier, monospace;
 }
-
 .Header_tag {
-  grid-area: header;
+  /* grid-area: header; */
   height: 160px;
   border-bottom: 2px solid black;
   background: black;
 }
 
-/* .Footer_tag {
-  grid-area: footer;
+.Footer_tag {
+  /* grid-area: footer; */
   border-top: 2px solid black;
   background: black;
-} */
+  height: 20vh;
+}
+
 
 .warp_Calender {
   grid-area: main;

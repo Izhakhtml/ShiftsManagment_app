@@ -17,7 +17,8 @@ const CalendarApp = () => { //! component
                     endTime={{ h: 20, m: 15 }}
                     scaleUnit={60}
                     scaleHeaderTitle="שעות"
-                    dayFormat='dddd DD/MM'
+                    dayFormat='YYYY-MM-DD'
+                    cellHeight={35}
                     dayCellComponent={(startSelection) => { return <GetTurns startSelection={startSelection} /> }}
                 />
             </div>

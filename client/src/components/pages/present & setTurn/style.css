@@ -13,11 +13,12 @@
 }
 .set_newTurn {
     border: 2px solid white;
-    height: 70%;
+    height: 40vh;
     width: 29vw;
     left: 30%;
     background: gray;
     position: absolute;
+    top: 10%;
     /* z-index: 1; */
 }
 .turn_details {

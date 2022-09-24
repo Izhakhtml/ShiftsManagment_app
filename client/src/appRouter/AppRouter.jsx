@@ -6,8 +6,6 @@ import Profile from "../components/pages/profile/Profile";
 import Footer from "../components/parts/Footer";
 import Header from "../components/parts/Header";
 import ContainAll from "../components/pages/login & register/ContainAll";
-import Register from "../components/pages/login & register/Register";
-import Login from "../components/pages/login & register/Login";
 const AppRouter = () => {
     const { user } = useContext(UserProvider);
     return (
