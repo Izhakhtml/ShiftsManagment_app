@@ -39,3 +39,4 @@ const socketIo = new Server(server,
 server.listen(port, () => {
     console.log("SERVER IS UP");
 })
+
