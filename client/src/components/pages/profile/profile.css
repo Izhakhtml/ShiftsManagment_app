@@ -58,7 +58,6 @@
 }
 
 .contain_Turns {
-    /* padding: 5px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -74,8 +73,6 @@
 .text_editIcon {
     color: transparent;
     position: absolute;
-    /* top: 48%;
-    left: 56.5%; */
 }
 
 .edit_icon:hover+.text_editIcon {

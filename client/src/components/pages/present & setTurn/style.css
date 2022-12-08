@@ -1,60 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .calendarModal__content {
     width: 30vw;
     color: white;
 }
-.contain_all_info{
+
+.contain_all_info {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(122, 118, 118, 0.6);
-    /* opacity: 0.1; */
+    background: rgba(16, 38, 30, 0.1)
 }
+
 .set_newTurn {
     border: 2px solid white;
-    height: 40vh;
-    width: 29vw;
+    width: 30vw;
+    height: 35vh;
     left: 30%;
-    background: gray;
+    color: gold;
+    box-shadow: 10px 10px 10px black;
+    background: black;
     position: absolute;
     top: 10%;
-    /* z-index: 1; */
+    border-radius: 20px;
+    border: 2px green solid;
 }
+
 .turn_details {
-    border: 10px solid green;
-    background: gray;
-    padding: 30px;
+    box-shadow: 10px 10px 10px black;
+    border: 2px solid red;
+    background: black;
     position: absolute;
     width: 30vw;
     left: 30%;
-    height: 60%;
+    top: 10%;
+
+    color: gold;
+    height: 35vh;
+    border-radius: 20px;
 }
 
-.turn_details span {
+.turn_details h1 {
+    border-bottom: 2px double gold;
+    margin: 4%;
+}
+
+.turn_details p {
     font-size: larger;
-    color: white;
-}
-/* .span_tap {
-    font-weight: bold;
-    color: white;
-} */
-
-p {
-    font-weight: bold;
-    color: white;
 }
 
-.button_icon{
+.turn_info p {
+    margin-top: 5%;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.turn_info h1 {
+    border-bottom: 2px double gold;
+    margin: 4%;
+}
+
+.button_icon {
     background: none;
     border: none;
     color: green;
     cursor: pointer;
 }
-.turn_info h2 {
-    border-bottom: 2px double white;
-    margin-left: 8vw;
-    margin-right: 8vw;
-    padding: 5px;
-}
-

@@ -5,10 +5,10 @@ export const UserContext = ({ children }) => {
     const [isLogin, setIsLogin] = useState(null);
     const [isDisappear, setIsDisappear] = useState(null)
     useEffect(() => {
-        if (localStorage.getItem('userObject') != undefined && localStorage.getItem('userObject') != {}) {
+        if (localStorage.getItem('userObject') !== "undefined") {
             setUser(JSON.parse(localStorage.getItem('userObject')))
         }
-        if (localStorage.getItem('isConnected') != undefined) {
+        if (localStorage.getItem('isConnected') !== undefined) {
             setIsLogin(localStorage.getItem('isConnected'))
         }
         // localStorage.removeItem('userObject')
