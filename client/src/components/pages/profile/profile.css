@@ -1,34 +1,22 @@
-.profile {
+.warp_profile {
     margin: 2px;
     padding: 2%;
     position: relative;
     left: 31%;
-    border-radius: 5px;
-    border: 2px solid #000000;
+    border-radius: 10px;
+    border: 2px solid white;
     width: 30vw;
     background: gray;
+    
 }
-
+.profile{
+    border-radius: 10px;
+    border: 2px solid white;
+}
 .pro_details {
-    background: rgb(55, 55, 68);
+    border-radius: 10px;
     padding: 10px;
     margin-bottom: 2px;
-    border: 2px solid black;
-}
-
-.pro_details h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: lighter;
-    border-bottom: 2px dotted white;
-    color: white;
-    width: 18vw;
-    margin-left: 20%;
-}
-
-.pro_details img {
-    margin: 10px;
-    width: 15vw;
-    border-radius: 20px;
 }
 
 .turnInfo span {
@@ -63,11 +51,18 @@
     justify-content: space-between;
 }
 
+.exist_turn h3 {
+    font-weight: lighter;
+}
+
 .exist_turn {
     margin: 3px;
-    padding: 4px;
-    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px dotted white;
     width: 13vw;
+    font-weight: lighter;
+    font-size: 17px;
 }
 
 .text_editIcon {
@@ -89,6 +84,7 @@
     margin: 2px;
     font-size: 30px;
 }
+
 .text_deleteIcon {
     color: transparent;
     position: absolute;
@@ -102,18 +98,15 @@
     border: 1px solid black;
 }
 
-.exitTurns_component {
-    background: rgb(55, 55, 68);
-    border: 2px solid black;
-}
-
 .exitTurns_component h2 {
-    font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
     border-bottom: 2px dotted white;
+    border-top: 2px dotted white;
     color: white;
+    border-radius: 90px;
     width: 18vw;
-    margin-left: 20%;
+    position: relative;
+    left: 20%;
 }
 
 .edit_userProfile {
@@ -125,6 +118,18 @@
     top: 12%;
     background: rgb(95, 95, 114);
     border-radius: 20px;
+    z-index: 1;
+}
+
+.edit_userProfile h1 {
+    border-radius: 90px;
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+    font-weight: lighter;
+    color: white;
+    width: 20vw;
+    position: relative;
+    left: 18%;
 }
 
 .edit_userProfile input {
@@ -155,9 +160,30 @@
     border-radius: 20px;
     cursor: pointer;
 }
-.notExistTurn{
+
+.notExistTurn h4{
     position: relative;
-    left: 18%;
+    left: 50%; 
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.editInfo img {
+    border-radius: 50px;
+    border: 2px solid white;
+    margin: 5px;
+    width: 15vw;
+}
+
+.editInfo h1 {
+    border-radius: 90px;
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    color: white;
+    width: 18vw;
+    margin-left: 20%;
+
 }

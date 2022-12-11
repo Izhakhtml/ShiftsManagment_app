@@ -4,7 +4,7 @@ const TurnDetails = ({dataTurn}) => {
         <div className='turnInfo'>
             <FaCut className='cut_icon' /><br />
             <h3> :בתאריך  {dataTurn.selectedDay}</h3>
-            <span> מ:{dataTurn.startHour} עד:{dataTurn.endHour}</span><br />
+            <h3> מ:{dataTurn.startHour} עד:{dataTurn.endHour}</h3><br />
         </div>
     )
 }

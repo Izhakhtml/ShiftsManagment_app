@@ -6,9 +6,11 @@ import TurnComponents from './TurnsComponents';
 const Profile = () => {
     const { user } = useContext(UserProvider);
     return (
-        <div className="profile">
-            <UserDetails userData={user} />
-            <TurnComponents userData={user} />
+        <div className="warp_profile">
+            <div className='profile'>
+                <UserDetails userData={user} />
+                <TurnComponents userData={user} />
+            </div>
         </div>
     )
 }
