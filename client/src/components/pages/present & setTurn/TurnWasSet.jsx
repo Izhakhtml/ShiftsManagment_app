@@ -1,13 +1,10 @@
-const TurnWasSet = ({ details }) => {
+const TurnWasSet = () => {
 
     return (
-        <div className="turn_details" >
-            <h1>נקבע לך תור</h1>
+        <div className="savedTurn" >
+            <h1>תור זה נתפס</h1>
             <p>
-                נקבע לך תור לתאריך {details.date} <br />
-                משעה {details.startHour} עד {details.endHour} לא לאחר
-                במידה ולא מסתדר התור נא לעדכן תמערכת
-                יש מישהו שזה יכול לעזור לו <br />
+                נקבע תור בתאריך זה אנא חפש תור אחר
             </p>
         </div>
     )

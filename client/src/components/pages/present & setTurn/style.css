@@ -19,9 +19,9 @@
 
 .set_newTurn {
     border: 2px solid white;
-    width: 30vw;
-    height: 35vh;
-    left: 30%;
+    width: 25vw;
+    height: 30vh;
+    left: 35%;
     color: gold;
     box-shadow: 10px 10px 10px black;
     background: black;
@@ -29,40 +29,45 @@
     top: 10%;
     border-radius: 20px;
     border: 2px green solid;
+   
 }
-
-.turn_details {
-    box-shadow: 10px 10px 10px black;
-    border: 2px solid red;
-    background: black;
-    position: absolute;
-    width: 30vw;
-    left: 30%;
-    top: 10%;
-
-    color: gold;
-    height: 35vh;
-    border-radius: 20px;
-}
-
-.turn_details h1 {
-    border-bottom: 2px double gold;
-    margin: 4%;
-}
-
-.turn_details p {
-    font-size: larger;
-}
-
-.turn_info p {
+.freeTurn p {
     margin-top: 5%;
     font-size: 20px;
     font-weight: lighter;
 }
 
-.turn_info h1 {
+.freeTurn h1 {
     border-bottom: 2px double gold;
     margin: 4%;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.savedTurn {
+    box-shadow: 10px 10px 10px black;
+    border: 2px solid red;
+    background: black;
+    position: absolute;
+    width: 25vw;
+    height:30vh;
+    left: 35%;
+    top: 10%;
+    color: gold;
+    border-radius: 20px;
+}
+
+.savedTurn h1 {
+    border-bottom: 2px double gold;
+    margin: 4%;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.savedTurn p {
+    font-size: larger;
 }
 
 .button_icon {

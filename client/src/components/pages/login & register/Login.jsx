@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { CalenderProvider } from '../../../context/CalenderContext'
 import { UserProvider } from '../../../context/UserContext'
-import Loading from '../../../loading/Loading'
+import Loading from '../../../loading/loading'
 import { LOGIN } from '../../../services/userService'
 import LoginTemplate from './LoginTemplate'
 const Login = () => {

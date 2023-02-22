@@ -35,7 +35,7 @@ const PresentDataTurn = ({ data , dataObject}) => {
                         <div className='set_newTurn'>
                             <DataTurn dataTurn={data} />
                             <SendDataTurn dataObject={dataObject} newDataTurn={data} />
-                        </div> : <TurnWasSet details={data} /> : "Loading"
+                        </div> : <TurnWasSet /> : "Loading"
             }
         </div>
     )

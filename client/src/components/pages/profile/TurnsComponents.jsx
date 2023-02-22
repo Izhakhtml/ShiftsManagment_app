@@ -1,7 +1,7 @@
 import './profile.css';
 import ExitTurn from "./turnInfo/ExitTurn";
 import NotExistTurn from "./turnInfo/NotExistTurn";
-import Loading from "../../../loading/Loading";
+import Loading from "../../../loading/loading";
 import { useContext, useEffect, useState } from "react";
 import { CalenderProvider } from "../../../context/CalenderContext";
 import { format } from 'date-fns'

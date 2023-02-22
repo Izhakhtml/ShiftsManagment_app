@@ -19,7 +19,8 @@ const GetTurns = ({ startSelection }) => {
     }, [isDataArrived])
     useEffect(() => {
         if (startSelection.endTime != undefined) {
-            if (format(startSelection.endTime._d, 'dd/MM/yyyy') == `${CurrentDate.getDate()}/${CurrentDate.getMonth() + 1}/${CurrentDate.getFullYear()}`) {
+            // `${CurrentDate.getDate()}/${CurrentDate.getMonth() + 1}/${CurrentDate.getFullYear()}`
+            if (format(startSelection.endTime._d, 'dd/MM/yyyy') == format(CurrentDate, 'dd/MM/yyyy')) {
                 if (format(startSelection.startTime._d, 'HH:ss').substr(0, 2) > CurrentDate.getHours()) {
                     setIsHourPassed({ ...startSelection, isPass: false })
                 } else {

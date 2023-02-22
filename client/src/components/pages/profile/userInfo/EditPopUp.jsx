@@ -3,7 +3,7 @@ import { EDIT, GetById } from "../../../../services/userService";
 import { UserProvider } from '../../../../context/UserContext'
 import { CalenderProvider } from "../../../../context/CalenderContext";
 import axios from 'axios'
-import Loading from '../../../../loading/Loading'
+import Loading from '../../../../loading/loading'
 const EditPopUp = ({ ClosePopUp, userData }) => {
     const editProfile = {};
     const [editImagePro, setEditImagePro] = useState("");

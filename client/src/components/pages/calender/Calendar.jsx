@@ -2,7 +2,7 @@ import '../../../App.css'
 import WeekCalendar from 'react-week-calendar';
 import 'react-week-calendar/dist/style.css';
 import GetTurns from '../present & setTurn/GetTurn';
-import Loading from '../../../loading/Loading';
+import Loading from '../../../loading/loading';
 import { CalenderProvider } from '../../../context/CalenderContext';
 import { useContext } from 'react';
 const CalendarApp = () => { //! component
