@@ -99,9 +99,9 @@
 }
 
 .exitTurns_component h2 {
-    font-weight: lighter;
+    font-weight: bold;
     border-bottom: 2px dotted white;
-    border-top: 2px dotted white;
+    /* border-top: 2px dotted white; */
     color: white;
     border-radius: 90px;
     width: 18vw;
@@ -123,9 +123,9 @@
 
 .edit_userProfile h1 {
     border-radius: 90px;
-    border-top: 2px dotted white;
+    /* border-top: 2px dotted white; */
     border-bottom: 2px dotted white;
-    font-weight: lighter;
+    font-weight: bold;
     color: white;
     width: 20vw;
     position: relative;
@@ -178,10 +178,11 @@
 
 .editInfo h1 {
     border-radius: 90px;
-    border-top: 2px dotted white;
+    /* border-top: 2px dotted white; */
+
     border-bottom: 2px dotted white;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: lighter;
+    font-weight: bold;
     color: white;
     width: 18vw;
     margin-left: 20%;

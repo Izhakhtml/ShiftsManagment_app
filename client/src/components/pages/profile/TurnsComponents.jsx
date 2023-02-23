@@ -13,7 +13,12 @@ const TurnComponents = ({ userData }) => {
         let counter = 0;
         if (arrayShift.length > 0) {
             arrayShift.map(item => {
-                if (new Date() <= new Date(`${item.selectedDay.substr(item.selectedDay.indexOf('/') + 4)}/${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}/${item.selectedDay.substr(0, item.selectedDay.indexOf('/'))}`) || format(new Date(), 'dd/MM/yyyy') == item.selectedDay) {
+                let createDateObj = new Date(`${item.selectedDay.substr(item.selectedDay.indexOf('/') + 4)}
+                                         /${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}
+                                         /${item.selectedDay.substr(0, item.selectedDay.indexOf('/'))} ${item.startHour}`);
+                //! TEST    
+                //! new Date() <= new Date(`${item.selectedDay.substr(item.selectedDay.indexOf('/') + 4)}/${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}/${item.selectedDay.substr(0, item.selectedDay.indexOf('/'))}`) || format(new Date(), 'dd/MM/yyyy') == item.selectedDay //!
+                if (new Date() <= createDateObj) {
                     if (item.userId == userData._id) {
                         availableTurns[counter] = item;
                         setBool(true);
