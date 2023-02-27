@@ -5,6 +5,7 @@
     border: none;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 40px;
+    border: 2px solid white;
 }
 
 .switching_between_compo:hover {
@@ -13,14 +14,17 @@
 }
 
 .contoin_all {
-    border-bottom: 70px solid #E7E9EB;
+    border-bottom: 70px solid #E7E9EB; 
     background: #E7E9EB;
     position: relative;
-    /* left: 86%; */
+    left: 86%;
     height: 20%;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    border-radius: 5px;
+    margin-top: 5px;
+    background: black;
+    border-top: 2px solid white;
+    border-right: 0.5px solid white;
+    border-left: 0.5px solid white;
+
 }
 
 label {
@@ -28,7 +32,7 @@ label {
     font-family: 'Courier New', Courier, monospace;
 }
 
-button {
+.contoin_all button {
     margin: 5px;
     padding: 5px;
     font-family: 'Courier New', Courier, monospace;
@@ -38,8 +42,7 @@ button {
     border: 2px solid #E7E9EB;
 
 }
-
-button:hover {
+.contoin_all button:hover {
     background: rgb(216, 214, 214);
     background: #E7E9EB;
 }

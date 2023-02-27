@@ -12,7 +12,10 @@ const ContainAll = () => {
         <div className='contoin_all'>
             <button className='switching_between_compo'  onClick={ChangeToRegister}>REGISTER</button>
             <button className='switching_between_compo' onClick={ChangeToLogin}>LOGIN</button>
+            <div>
+
             {bool ? <Register /> : <Login />}
+            </div>
         </div>
     )
 }

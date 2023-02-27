@@ -1,17 +1,18 @@
 .warp_profile {
-    margin: 2px;
+    margin: 5px;
     padding: 2%;
     position: relative;
-    left: 31%;
+    left: 77%;
     border-radius: 10px;
     border: 2px solid white;
     width: 30vw;
-    background: gray;
+    background: black;
     
 }
 .profile{
     border-radius: 10px;
     border: 2px solid white;
+    height: 100%;
 }
 .pro_details {
     border-radius: 10px;
@@ -163,7 +164,7 @@
 
 .notExistTurn h4{
     position: relative;
-    left: 50%; 
+    left: 37%; 
     color: white;
     font-size: 25px;
     font-weight: lighter;
@@ -178,8 +179,6 @@
 
 .editInfo h1 {
     border-radius: 90px;
-    /* border-top: 2px dotted white; */
-
     border-bottom: 2px dotted white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;

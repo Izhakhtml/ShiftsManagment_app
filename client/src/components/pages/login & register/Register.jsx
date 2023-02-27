@@ -48,9 +48,9 @@ const Register = () => {
     }
 
     return (
-        <>
+        <div >
             <RegisterTemplate InputValue={InputValue} CreateNewUser={CreateNewUser}  />
-        </>
+        </div>
     )
 }
 export default Register;

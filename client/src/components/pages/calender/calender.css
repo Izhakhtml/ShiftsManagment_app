@@ -1,0 +1,35 @@
+.warp_Calender h1{
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 2px solid white;
+    margin-left: 35%;
+    margin-right: 35%;
+     color: white;
+  }
+  .weekCalendar__headerColumn{
+    width:70vw;
+    background: rgb(26, 22, 36);
+    color: white;
+  }
+  .weekCalendar .weekCalendar__scaleHeader {
+    background: rgb(26, 22, 36);
+    color: white;
+  }
+  .weekCalendar__scaleColumn .weekCalendar__scaleCell {
+    background: rgb(26, 22, 36);
+    color: white;
+  }
+  .warp_Calender {
+    grid-area: main;
+    width:70vw;
+    margin-left: 15%;
+  }
+  ._calenderStyle {
+    position: relative;
+    height: 300px;
+    width: 900px !important;
+  }
+  .contain_calender {
+    display: flex;
+    justify-content: space-around;
+  }

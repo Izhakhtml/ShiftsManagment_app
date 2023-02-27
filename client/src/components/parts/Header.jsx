@@ -9,7 +9,7 @@ const Header = () => {
         setUser({})
         setIsLogin(false)
         window.localStorage.removeItem('image');
-        localStorage.setItem('userObject', {});
+        localStorage.setItem('userObject', undefined);
         localStorage.setItem('isConnected', false);
     }
     return (
@@ -17,9 +17,9 @@ const Header = () => {
             {
                 user.userName != undefined ?
                     <>
-                        <Link to="/settingShift"><button>Setting Shift</button></Link>
-                        <Link to="/"><button>Profile</button></Link>
-                        <Link to="/"><button onClick={Logout}><FiLogOut /></button></Link>
+                        <Link to="/settingShift"><button>קביעת תורים</button></Link>
+                        <Link to="/"><button>איזור אישי</button></Link>
+                        <Link className='logoutBtn' to="/"><button onClick={Logout}><FiLogOut /></button></Link>
                     </> : ""
             }
         </div>

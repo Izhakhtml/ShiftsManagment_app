@@ -39,7 +39,7 @@ const TurnComponents = ({ userData }) => {
     }, [availableTurns])
     return (
         <div className='exitTurns_component'>
-            <h2>תורות </h2>
+            <h2>תורים </h2>
             <div className='contain_Turns'>
                 {
                     availableTurns.length > 0 ?

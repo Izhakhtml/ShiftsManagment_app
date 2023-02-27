@@ -76,3 +76,13 @@
     color: green;
     cursor: pointer;
 }
+.leftBtn{
+    font-size:30px;
+    cursor: pointer;
+    color: white;
+}
+.rightBtn{
+    font-size:30px;
+    cursor: pointer;
+    color: white;
+}

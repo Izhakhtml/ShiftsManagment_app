@@ -16,7 +16,7 @@ const AppRouter = () => {
                 <Routes>
                     {
                         
-                        user.userName != undefined ?
+                        user.userName != undefined   ?
                             <>
                                 <Route path="/" element={<Profile />}></Route>
                                 <Route path="/settingShift" element={<CalendarApp />}></Route>

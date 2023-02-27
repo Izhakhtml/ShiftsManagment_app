@@ -12,6 +12,7 @@ export const UserContext = ({ children }) => {
             setIsLogin(localStorage.getItem('isConnected'))
         }
         // localStorage.removeItem('userObject')
+        // localStorage.removeItem('image')
     }, [])
     return (
         <UserProvider.Provider value={{ user, setUser, isLogin, setIsLogin, isDisappear, setIsDisappear }}>
