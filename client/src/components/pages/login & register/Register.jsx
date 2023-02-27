@@ -7,6 +7,7 @@ const Register = () => {
     const [pass, setPass] = useState('');
     const [pho, setPho] = useState('');
     const [img, setImg] = useState('');
+    const [isAdmin, setIsAdmmin] = useState(null)
     const InputValue = (e) => {
         switch (e.target.name) {
             case 'userName':
@@ -17,6 +18,8 @@ const Register = () => {
                 return setPho(e.target.value)
             case 'image':
                 return setImg(e.target.files[0])
+            case 'isAdmin':
+                return setIsAdmmin(e.target.value)
             default:
                 return console.log("error register");
         }
@@ -35,13 +38,17 @@ const Register = () => {
             data.append("password", pass);
             data.append("phoneNumber", pho);
             data.append("image", img);
+            data.append('isAdmin',isAdmin)
+            console.log(isAdmin);
             await axios.post('http://localhost:8080/user/register', data)
                 .then(data => {
-                    if (data) {
-                        alert(`הנתונים שלך נשמרו במערכת בהצלחה!\n אתה רשאי להתחבר!`)
-                    }
+                    console.log(data);
+            //         if (data) {
+            //             alert(`הנתונים שלך נשמרו במערכת בהצלחה!\n אתה רשאי להתחבר!`)
+            //         }
                 })
                 .catch(rej => alert(rej.response.data.message))
+
         } else {
             console.log("out");
         }
@@ -49,7 +56,7 @@ const Register = () => {
 
     return (
         <div >
-            <RegisterTemplate InputValue={InputValue} CreateNewUser={CreateNewUser}  />
+            <RegisterTemplate InputValue={InputValue} CreateNewUser={CreateNewUser} />
         </div>
     )
 }

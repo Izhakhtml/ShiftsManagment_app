@@ -17,11 +17,13 @@ const AppRouter = () => {
                     {
                         
                         user.userName != undefined   ?
+                           user.isAdmin == 'Admin'?
+                            <Route path="/" element={<CalendarApp/>}></Route>:
                             <>
                                 <Route path="/" element={<Profile />}></Route>
                                 <Route path="/settingShift" element={<CalendarApp />}></Route>
-                            </> :
-                            <>
+                            </> 
+                           : <>
                                 <Route path="/" element={<ContainAll />}></Route>
                             </>
                     }
