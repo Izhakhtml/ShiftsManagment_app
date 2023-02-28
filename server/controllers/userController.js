@@ -2,9 +2,14 @@ const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
 //! Register
 const Register = async (req, res) => {
-    const { path } = req.file;
-
-    console.log(req.body, req.file);
+    let path;
+    if (req.file != undefined) {
+     path  = req.file.path;
+    } else {
+         path = 'uploads\\1677525409602-userImage.webp'
+    }
+    
+    console.log(req.file , req.body);
     if (await User.exists({ userName: req.body.userName })) return res.status(400).send({ message: "userName already exists" })
     bcrypt.hash(req.body.password, 10, async (err, hash) => {
         if (err) return res.status(500).send({ message: "hash error" });
@@ -35,6 +40,7 @@ const Get = async (req, res) => {
         .then((data) => res.send(data))
         .catch((err) => res.status(404).send({ message: err.message }))
 }
+
 const GetById = async (req, res) => {
     await User.findById({ _id: req.params.id })
         .then((data) => {

@@ -24,6 +24,7 @@ const socketIo = new Server(server,
         }
     });
     
+    
     socketIo.of('/socketIo').on('connection', (socket) => {
         socket.on("date", (item) => console.log(item))
     })
