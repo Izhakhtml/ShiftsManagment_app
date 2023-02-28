@@ -42,10 +42,9 @@ const Register = () => {
             console.log(isAdmin);
             await axios.post('http://localhost:8080/user/register', data)
                 .then(data => {
-                    console.log(data);
-            //         if (data) {
-            //             alert(`הנתונים שלך נשמרו במערכת בהצלחה!\n אתה רשאי להתחבר!`)
-            //         }
+                    if (data) {
+                        alert(`הנתונים שלך נשמרו במערכת בהצלחה!\n אתה רשאי להתחבר!`)
+                    }
                 })
                 .catch(rej => alert(rej.response.data.message))
 

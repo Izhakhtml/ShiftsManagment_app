@@ -14,7 +14,7 @@ const TurnComponents = ({ userData }) => {
         if (arrayShift.length > 0) {
             arrayShift.map(item => {
                 let createDateObj = new Date(`${item.selectedDay.substr(item.selectedDay.indexOf('/') + 4)}
-                                         /${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}
+                                          /${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}
                                          /${item.selectedDay.substr(0, item.selectedDay.indexOf('/'))} ${item.startHour}`);
                 //! TEST    
                 //! new Date() <= new Date(`${item.selectedDay.substr(item.selectedDay.indexOf('/') + 4)}/${item.selectedDay.substr(item.selectedDay.indexOf('/') + 1, 2)}/${item.selectedDay.substr(0, item.selectedDay.indexOf('/'))}`) || format(new Date(), 'dd/MM/yyyy') == item.selectedDay //!
@@ -25,7 +25,8 @@ const TurnComponents = ({ userData }) => {
                         setAvailableTurns([...availableTurns]);
                         counter++;
                     } else {
-                        setAvailableTurns(["not exist"])
+                        availableTurns[counter] = "not exist"
+                        setAvailableTurns([...availableTurns])
                     }
                 } else {
                     setAvailableTurns(["not exist"])
@@ -34,17 +35,24 @@ const TurnComponents = ({ userData }) => {
         }
     }, [isDataArrived])
     useEffect(() => {
-        availableTurns[0] == "not exist" ?
-            setBool(false) : <></>
+        // availableTurns[0] == "not exist" ?
+        //     setBool(false) : <></>
+
+        for (let i = 0; i < availableTurns.length; i++) {
+            if (availableTurns[i] == 'not exist') setBool(false);
+            return
+
+        }
     }, [availableTurns])
     return (
         <div className='exitTurns_component'>
-            <h2>תורים </h2>
+            <h2>תורות </h2>
             <div className='contain_Turns'>
                 {
                     availableTurns.length > 0 ?
                         availableTurns.map((item, i) =>
                             <div key={i}>
+                                {console.log(availableTurns)}
                                 {bool == true ? <ExitTurn data={item} arrayState={availableTurns} setArrayState={setAvailableTurns} /> : <NotExistTurn />}
                             </div>
                         )

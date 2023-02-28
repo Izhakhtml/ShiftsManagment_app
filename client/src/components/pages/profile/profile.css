@@ -36,8 +36,6 @@
     color: white;
     position: relative;
 }
-
-
 .cut_icon {
     padding-bottom: 10px;
     border-bottom: 2px solid white;
@@ -61,7 +59,7 @@
     padding: 10px;
     border-radius: 20px;
     border: 2px dotted white;
-    width: 13vw;
+    width: 12vw;
     font-weight: lighter;
     font-size: 17px;
 }

@@ -14,7 +14,8 @@ const SendDataTurn = ({ newDataTurn ,dataObject}) => {
             userId: user._id,
             selectedDay: newDataTurn.date,
             startHour: newDataTurn.startHour,
-            endHour: newDataTurn.endHour
+            endHour: newDataTurn.endHour,
+            userObject: user
         })
     }, [])
     const CreateTurnObject = async () => {
