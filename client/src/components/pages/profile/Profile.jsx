@@ -5,6 +5,7 @@ import UserDetails from "./userInfo/UserDetails";
 import TurnComponents from './TurnsComponents';
 const Profile = () => {
     const { user } = useContext(UserProvider);
+    console.log(user);
     return (
         <div className="warp_profile">
             <div className='profile'>

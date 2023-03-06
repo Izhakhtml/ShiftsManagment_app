@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "react-icons": "^4.4.0"
+  },"scripts": {
+    "server":"cd server && npm run server",
+    "client":"cd client && npm start",
+    "dev":"npm run client && npm run server"
   }
 }

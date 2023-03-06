@@ -6,8 +6,8 @@ import { FiLogOut } from 'react-icons/fi'
 const Header = () => {
     const { user, setUser, setIsLogin } = useContext(UserProvider)
     const Logout = () => {
-        setUser({})
-        setIsLogin(false)
+        setUser(undefined);
+        setIsLogin(false);
         window.localStorage.removeItem('image');
         localStorage.setItem('userObject', undefined);
         localStorage.setItem('isConnected', false);

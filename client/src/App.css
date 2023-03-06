@@ -22,12 +22,12 @@ body{
   border-bottom: 1px solid white;
 
 }
-.Footer_tag {
+/* .Footer_tag {
   grid-area: footer;
   background: black;
   height: 10vh;
   border-top: 1px solid white;
-}
+} */
 .Header_tag button {
   padding: 7px;
   margin: 10px;

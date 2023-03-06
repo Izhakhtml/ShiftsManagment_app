@@ -52,7 +52,6 @@ const TurnComponents = ({ userData }) => {
                     availableTurns.length > 0 ?
                         availableTurns.map((item, i) =>
                             <div key={i}>
-                                {console.log(availableTurns)}
                                 {bool == true ? <ExitTurn data={item} arrayState={availableTurns} setArrayState={setAvailableTurns} /> : <NotExistTurn />}
                             </div>
                         )

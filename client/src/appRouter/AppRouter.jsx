@@ -8,15 +8,15 @@ import Header from "../components/parts/Header";
 import ContainAll from "../components/pages/login & register/ContainAll";
 const AppRouter = () => {
     const { user } = useContext(UserProvider);
+    console.log(user);
     return (
         <BrowserRouter>
-
             <div className="container_app">
                 <Header />
                 <Routes>
                     {
                         
-                        user.userName != undefined   ?
+                        user.userName != undefined?
                            user.isAdmin == 'Admin'?
                             <Route path="/" element={<CalendarApp/>}></Route>:
                             <>
@@ -28,6 +28,9 @@ const AppRouter = () => {
                             </>
                     }
                 </Routes>
+                {
+                    user.userName!= undefined?console.log("true"):console.log("false")
+                }
                 <Footer />
             </div>
         </BrowserRouter>
